@@ -11245,6 +11245,16 @@ Prefab:
       propertyPath: m_SuspensionDistance
       value: 0.23692791
       objectReference: {fileID: 0}
+    - target: {fileID: 114580535732276454, guid: 6c1bef16ddb8b8f4583a47953d525de2,
+        type: 2}
+      propertyPath: rotateTorque
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 146835973028070308, guid: 6c1bef16ddb8b8f4583a47953d525de2,
+        type: 2}
+      propertyPath: m_SuspensionDistance
+      value: 0.2369279
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c1bef16ddb8b8f4583a47953d525de2, type: 2}
   m_IsPrefabParent: 0

@@ -14,10 +14,14 @@ public enum DriveType
 public class WheelDrive : MonoBehaviour
 {
     public GameObject bone;
+    Rigidbody carRB;
     float boneRotationSpeed;
     public int maxBoneRotation = 20;
     public int boneSpeed = 8;
-
+    public float rotateTorque;
+    bool wheelGrounded;
+    float turnUp;
+    float turnLR;
     Rigidbody rb;
     float Speed;
 
@@ -47,7 +51,7 @@ public class WheelDrive : MonoBehaviour
     // Find all the WheelColliders down in the hierarchy.
 	void Start()
 	{
-
+        carRB = gameObject.GetComponent<Rigidbody>();
         m_Wheels = GetComponentsInChildren<WheelCollider>();
 
 		for (int i = 0; i < m_Wheels.Length; ++i) 
@@ -153,6 +157,20 @@ public class WheelDrive : MonoBehaviour
 
     void FixedUpdate()
     {
+        for (int i = 0; i < m_Wheels.Length; ++i)
+        {
+            var wheel = m_Wheels[i];
 
+            wheelGrounded = wheel.isGrounded;
+        }
+
+        turnUp = Input.GetAxis("RotateUpDown");
+        turnLR = Input.GetAxis("Horizontal");
+
+        if (wheelGrounded == false)
+        {
+            carRB.AddTorque(transform.right * rotateTorque * turnUp);
+            carRB.AddTorque(new Vector3(0, 0, -1) * rotateTorque * turnLR);
+        }
     }
 }

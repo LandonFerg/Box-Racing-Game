@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Driver : MonoBehaviour
 {
-    public Rigidbody[] rb;
+    Rigidbody[] rb;
     public CapsuleCollider playerColl;
     public GameObject cam;
     public WheelDrive drive;
