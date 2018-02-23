@@ -2105,19 +2105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2daaba8ea92b3f74d960df98a9ae013a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb:
-  - {fileID: 54660300651602590}
-  - {fileID: 54683758300674048}
-  - {fileID: 54303303197769884}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   playerColl: {fileID: 136705545041897236}
   cam: {fileID: 0}
   drive: {fileID: 114580535732276454}
@@ -2141,6 +2128,7 @@ MonoBehaviour:
   bone: {fileID: 1039592658268138}
   maxBoneRotation: 20
   boneSpeed: 10
+  rotateTorque: 1200
   maxAngle: 25
   maxTorque: 300
   maxSpeed: 150
