@@ -170,7 +170,7 @@ public class WheelDrive : MonoBehaviour
         if (wheelGrounded == false)
         {
             carRB.AddTorque(transform.right * rotateTorque * turnUp);
-            carRB.AddTorque(new Vector3(0, 0, -1) * rotateTorque * turnLR);
+            carRB.AddTorque(transform.up * rotateTorque * turnLR);  //TODO: Fix isssue with it rotating incorrectly when backwards with new Vector3(0, 0, -1)
         }
     }
 }
